@@ -9,6 +9,10 @@ let lang = {
   }
 };
 
+function __(key) {
+  document.write(lang[getLanguage()][key]);
+}
+
 function changeLanguage(code) {
   window.localStorage.setItem("lang", code);
   //console.log(langCode);
