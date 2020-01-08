@@ -9,7 +9,10 @@
 <body>
   <script src="js/main.js"></script>
 
-  <h1><script>document.write(lang.en.HEADER)</script></h1>
-  <p><script>document.write(lang.en.CONTENT)</script></p>
+  <a href="#" onclick="changeLanguage('en')">English</a> |
+  <a href="#" onclick="changeLanguage('ru')">Русский</a><br />
+
+  <h1><script>document.write(lang[getLanguage()].HEADER)</script></h1>
+  <p><script>document.write(lang[getLanguage()].CONTENT)</script></p>
 </body>
 </html>

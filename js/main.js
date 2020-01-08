@@ -8,3 +8,21 @@ let lang = {
     CONTENT: "Какое-то содержимое",
   }
 };
+
+function changeLanguage(code) {
+  window.localStorage.setItem("lang", code);
+  //console.log(langCode);
+
+  document.location.reload();
+}
+
+function getLanguage() {
+  let langCode = window.localStorage.getItem("lang");
+  console.log(langCode);
+  if (!langCode) {
+    langCode = "en";
+    changeLanguage("en");
+  }
+
+  return langCode;
+}
